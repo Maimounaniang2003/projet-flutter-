@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maimouna/screens/login_screen.dart';
 import 'package:maimouna/widget/bottomNav.dart';
-import 'package:maimouna/screens/communaute_screen.dart';
 import 'package:maimouna/widget/menuDrawer.dart';
 void main() {
   runApp(MyApp());
@@ -53,7 +52,7 @@ class PageAccueilState extends State<PageAccueil>{
         Padding(
           padding: const EdgeInsets.all(32),
           child: Text(
-            'Rencontrez Fallou, le roi autoproclamé des gaffes technologiques!',
+            'Rencontrez Maimouna!',
             softWrap: true,
           )),
           Row(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maimouna/main.dart';
 import 'package:maimouna/screens/communaute_screen.dart';
+import 'package:maimouna/screens/services/countries_screen.dart';
 class BottomNav extends StatefulWidget {
   int indexSelection;
   BottomNav({super.key, required this.indexSelection});
@@ -11,14 +12,22 @@ class BottomNavState extends State<BottomNav> {
   void getSelectItem() {
     switch (widget.indexSelection) {
       case 0:
-      Navigator.push(context, MaterialPageRoute(builder:(context)
-=> PageAccueil()));
+      Navigator.push(
+        context, MaterialPageRoute(builder:(context) => PageAccueil()));
         break;
       case 1:
-      Navigator.push(context, MaterialPageRoute(builder: (context)
-=>PageCommunaute()));    
+      Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PageCommunaute()));    
         break;
-      default:
+        case 2:
+        Navigator.push(
+        context, MaterialPageRoute(builder: (context) => countriesScreen()));
+        break;
+        case 3:
+        Navigator.push(
+        context, MaterialPageRoute(builder: (context) => countriesScreen()));
+        break;
+        default:
         break;
     }
   }
@@ -37,7 +46,11 @@ Widget build(BuildContext context) {
       BottomNavigationBarItem(
         label: "communauté",
         icon: Icon(Icons.person),
-      )
+      ),
+       BottomNavigationBarItem(
+        label: "Pays",
+        icon: Icon(Icons.flag),
+      ),
 
     ], 
     currentIndex: widget.indexSelection,
